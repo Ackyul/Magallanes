@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-500: #dc2626; /* Magallanes Red */
+}
+
+body {
+  font-family: "Inter", "Roboto", system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #0f172a; /* Slate 900 for default text */
+}
