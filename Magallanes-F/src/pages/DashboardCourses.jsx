@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const DashboardCourses = () => {
   const courses = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     title: `Curso ${i + 1}`,
-    teacher: `Profesor ${i + 1}`,
-    progress: ((i + 3) * 17) % 100
+    teacher: `Profesor ${i + 1}`
   }));
 
   return (
@@ -14,15 +15,25 @@ const DashboardCourses = () => {
           <p className="text-slate-500">Explora todos los cursos disponibles en tu ciclo actual.</p>
         </div>
         
-        <div className="relative w-full sm:w-64">
-          <input 
-            type="text" 
-            placeholder="Buscar curso..." 
-            className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-red-500"
-          />
-          <svg className="w-5 h-5 text-slate-400 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <div className="relative w-full sm:w-64">
+            <input 
+              type="text" 
+              placeholder="Buscar curso..." 
+              className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-red-500"
+            />
+            <svg className="w-5 h-5 text-slate-400 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          
+          <Link 
+            to="/login" 
+            className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg transition-colors text-sm w-full sm:w-auto whitespace-nowrap"
+          >
+            <svg className="w-5 h-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
+            Cerrar Sesión
+          </Link>
         </div>
       </div>
 
@@ -41,16 +52,8 @@ const DashboardCourses = () => {
               <h3 className="font-bold text-lg text-slate-900 mb-1">{course.title}</h3>
               <p className="text-sm text-slate-500 mb-4">{course.teacher}</p>
               
-              <div className="mt-auto">
-                <div className="flex justify-between text-xs mb-1.5">
-                  <span className="font-medium inline-block text-slate-700">Progreso</span>
-                  <span className="font-bold text-slate-900">{course.progress}%</span>
-                </div>
-                <div className="w-full bg-slate-100 rounded-full h-1.5 mb-4">
-                  <div className="bg-red-500 h-1.5 rounded-full" style={{ width: `${course.progress}%` }}></div>
-                </div>
-                
-                <button className="w-full py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg text-sm font-bold transition-colors">
+              <div className="mt-auto pt-4">
+                <button className="w-full py-2.5 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg text-sm font-bold transition-colors">
                   Ingresar al Aula
                 </button>
               </div>

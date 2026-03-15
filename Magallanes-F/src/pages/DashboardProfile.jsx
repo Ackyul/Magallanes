@@ -36,12 +36,12 @@ const DashboardProfile = () => {
         
         <div className="px-8 pb-8">
           {/* Avatar Header */}
-          <div className="flex justify-between items-end -mt-12 mb-8">
-            <div className="flex items-end gap-6">
-              <div className="w-24 h-24 rounded-full bg-slate-200 border-4 border-white shadow-md overflow-hidden relative z-10">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=f8fafc" alt="Profile" className="w-full h-full object-cover" />
+          <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-end -mt-12 mb-8 relative z-10 gap-4">
+            <div>
+              <div className="w-24 h-24 bg-white p-1 rounded-full shadow-md mb-3">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix&backgroundColor=f8fafc" alt="Profile" className="w-full h-full rounded-full object-cover" />
               </div>
-              <div className="pb-2">
+              <div>
                 <h2 className="text-2xl font-bold text-slate-900">{profileData.nombres}</h2>
                 <span className="inline-block mt-1 text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded-md uppercase tracking-wider">
                   Alumno Activo
@@ -51,7 +51,7 @@ const DashboardProfile = () => {
             
             <button 
               onClick={() => setIsEditing(!isEditing)}
-              className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg transition-colors text-sm"
+              className="px-6 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg transition-colors text-sm"
             >
               {isEditing ? 'Cancelar' : 'Editar Perfil'}
             </button>
