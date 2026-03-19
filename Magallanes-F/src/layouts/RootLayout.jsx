@@ -24,10 +24,7 @@ const RootLayout = () => {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex space-x-8 items-center">
-              <Link to="/" className="text-slate-600 hover:text-red-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition-colors">Inicio</Link>
-              <Link to="/courses" className="text-slate-600 hover:text-red-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition-colors">Ciclos</Link>
-              <Link to="/about" className="text-slate-600 hover:text-red-600 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition-colors">Nosotros</Link>
-              <Link to="/register" className="text-red-600 hover:text-red-700 px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wide transition-colors">Matricúlate</Link>
+              {/* Desktop nav empty — only the CTA button remains */}
             </nav>
 
             {/* Desktop CTA + Mobile Hamburger */}
@@ -55,11 +52,7 @@ const RootLayout = () => {
         {menuOpen && (
           <div className="md:hidden bg-white border-t border-slate-100 shadow-lg">
             <div className="px-4 py-4 space-y-1">
-              <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-bold text-sm uppercase tracking-wide transition-colors">Inicio</Link>
-              <Link to="/courses" onClick={() => setMenuOpen(false)} className="flex items-center px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-bold text-sm uppercase tracking-wide transition-colors">Ciclos</Link>
-              <Link to="/about" onClick={() => setMenuOpen(false)} className="flex items-center px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-50 font-bold text-sm uppercase tracking-wide transition-colors">Nosotros</Link>
-              <Link to="/register" onClick={() => setMenuOpen(false)} className="flex items-center px-4 py-3 rounded-xl text-red-600 hover:bg-red-50 font-bold text-sm uppercase tracking-wide transition-colors">Matricúlate</Link>
-              <div className="pt-2 border-t border-slate-100">
+            <div className="pt-2">
                 <Link to="/login" onClick={() => setMenuOpen(false)} className="flex items-center justify-center w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-sm uppercase tracking-wide transition-colors shadow-lg shadow-red-600/20">
                   Ingresa al Aula Virtual
                 </Link>
