@@ -54,12 +54,6 @@ const DashboardLayout = () => {
           </Link>
         </nav>
 
-        <div className="p-4 border-t border-slate-100">
-          <Link to="/login" className="flex items-center gap-3 px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg font-bold transition-colors">
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
-            Cerrar Sesión
-          </Link>
-        </div>
       </aside>
 
       {/* ── MAIN CONTENT ── */}
@@ -97,6 +91,10 @@ const DashboardLayout = () => {
         <header className="h-20 bg-white border-b border-slate-200 hidden md:flex items-center justify-between px-8 shrink-0">
           <h1 className="text-2xl font-bold text-slate-900">¡Hola, Estudiante! 👋</h1>
           <div className="flex items-center gap-4">
+            {/* Logout button */}
+            <Link to="/login" className="p-2 text-slate-400 hover:text-red-600 transition-colors" title="Cerrar Sesión" aria-label="Cerrar Sesión">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>
+            </Link>
             <div className="relative">
               <button
                 onClick={() => setShowNotifications(!showNotifications)}
