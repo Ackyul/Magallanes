@@ -8,7 +8,7 @@ const Home = () => {
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-red-500/5 rounded-full blur-3xl -z-10 mix-blend-multiply pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="grow flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+      <section className="grow flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-12 pb-20 sm:pt-20 sm:pb-32">
         <div className="max-w-4xl w-full space-y-8 text-center">
           <div className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             {/* Tagline */}

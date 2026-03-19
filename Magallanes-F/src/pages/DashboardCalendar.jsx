@@ -26,7 +26,7 @@ const DashboardCalendar = () => {
           </div>
           
           {/* Calendar Cells */}
-          <div className="grid grid-cols-7 auto-rows-[100px] bg-slate-200 gap-px">
+          <div className="grid grid-cols-7 auto-rows-[60px] sm:auto-rows-[90px] bg-slate-200 gap-px">
             {/* Generating 35 blank cells for a 5-week month view */}
             {Array.from({ length: 35 }).map((_, i) => (
               <div key={i} className="bg-white p-2 hover:bg-slate-50 transition-colors cursor-pointer group">

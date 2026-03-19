@@ -47,7 +47,7 @@ const Login = () => {
         </Link>
 
         {/* Form Container */}
-        <div className="max-w-md w-full animate-in fade-in zoom-in-95 duration-500">
+        <div className="max-w-md w-full animate-in fade-in zoom-in-95 duration-500 pt-16 lg:pt-0">
           <div className="text-center lg:text-left space-y-2 mb-10">
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Iniciar Sesión</h2>
             <p className="text-slate-500 text-lg">Ingresa tus credenciales del Aula Virtual</p>

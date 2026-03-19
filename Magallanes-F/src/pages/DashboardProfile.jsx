@@ -30,7 +30,7 @@ const DashboardProfile = () => {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
         {/* Header/Cover */}
-        <div className="h-32 bg-red-600 relative">
+        <div className="h-20 sm:h-32 bg-red-600 relative">
            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         </div>
         
