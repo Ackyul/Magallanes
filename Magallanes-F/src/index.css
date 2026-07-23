@@ -1,11 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-500: #dc2626; /* Magallanes Red */
+  --color-brand-red: #dd0000;
+  --color-brand-red-hover: #bb0000;
+  --color-brand-dark: #0f172a;
+}
+
+:root {
+  font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", "Roboto", system-ui, sans-serif;
-  background-color: #ffffff;
-  color: #0f172a; /* Slate 900 for default text */
+  font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden;
 }
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hide scrollbars for carousel slider */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
